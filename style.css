@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f7f6f2;          /* Off-white elegante */
+    --text-main: #111111;   /* Preto quase puro */
+    --text-muted: #555555;  /* Cinza neutro */
+    --border-color: #e2e0d8;
+    --font: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header elegante e discreto */
+.header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--text-main);
+}
+
+.nav-cta {
+    color: var(--text-main) !important;
+    border-bottom: 1.5px solid var(--text-main);
+    padding-bottom: 2px;
+}
+
+/* Hero Section Assimétrica */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.hero {
+    padding: 80px 0 100px 0;
+    max-width: 820px;
+}
+
+.headline {
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+    color: var(--text-main);
+    margin-bottom: 28px;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: #333333; /* Um pouco mais escuro para melhorar o contraste */
+    font-weight: 500; /* Mais leitura e autoridade */
+    line-height: 1.6;
+    max-width: 620px;
+    margin-bottom: 40px;
+}
+.hero-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.link-primary {
+    background-color: var(--text-main);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+
+.link-primary:hover {
+    opacity: 0.9;
+}
+
+.link-secondary {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.link-secondary:hover {
+    border-color: var(--text-main);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.2rem;
+    }
+    .hero-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Seção de Serviços */
+.services-section {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 48px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.service-card {
+    padding-right: 16px;
+}
+
+.service-num {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seção de Projetos */
+.projects-section {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-subtitle {
+    display: block;
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-image-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: #edebe4;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: border-color 0.2s;
+}
+
+.project-card:hover .project-image-placeholder {
+    border-color: var(--text-main);
+}
+
+.project-category {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.project-info h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.project-link {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--text-main);
+    padding-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Secção de Contacto */
+.contact-section {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.contact-box {
+    background-color: #efece6;
+    border: 1px solid var(--border-color);
+    padding: 48px;
+    border-radius: 8px;
+    max-width: 720px;
+}
+
+.contact-box h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
+}
+
+.contact-box p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 28px;
+}
+
+.contact-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.btn-whatsapp {
+    background-color: var(--text-main);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.btn-whatsapp:hover {
+    opacity: 0.9;
+}
+
+.link-email {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--text-main);
+    padding-bottom: 2px;
+}
+
+/* Rodapé */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 32px 0;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .contact-box {
+        padding: 32px 20px;
+    }
+    .contact-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+
+
+/* Estado inicial dos elementos que vão animar */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado final quando a classe 'active' for adicionada pelo JS */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
